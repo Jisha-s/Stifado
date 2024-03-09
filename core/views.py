@@ -14,5 +14,9 @@ def signup(request):
 def cart(request):
     return render(request,"cart.html") 
 
-def prodect_list(request):
-    return render(request,"prodect_list.html") 
+def product_list(request):
+    return render(request,"product_list.html") 
+
+
+def checkout(request):
+    return render(request,'checkout.html')
