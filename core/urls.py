@@ -1,15 +1,18 @@
 
 from django.urls import path,include
-from django.contrib.auth import views as authViews
+from django.contrib.auth import views as auth_views
 from . import views
+from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static 
 urlpatterns = [
         path('', views.index, name='index'),
-        path('signup/',views.authViews,name='signup'),
+
+
+        path('login/', views.login, name='login'),
+        path('signup/', views.signup,name='signup'),
         path('cart/',views.cart,name='cart'),
-        path('product_list/',views.product_list,name='productlist'),
-        path('checkout/',views.checkout,name="checkout"),
+        path('prodect_list/',views.prodect_list,name='prodectlist')
 
 
 
